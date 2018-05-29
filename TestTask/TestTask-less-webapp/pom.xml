@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ru.sendto.crxmarket</groupId>
+		<artifactId>TestTask</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>TestTask-less-webapp</artifactId>
+	<packaging>jar</packaging>
+
+	<name>Video-less-channelSubs</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>ru.send-to.less</groupId>
+				<artifactId>lesscss-maven-plugin</artifactId>
+				<configuration>
+					<sourceDirectory>${project.build.directory}/classes/less</sourceDirectory>
+					<outputDirectory>${project.build.directory}/${project.build.finalName}/META-INF/resources</outputDirectory>
+					<compress>false</compress>
+				</configuration>
+				<executions>
+					<execution>
+						<id>style</id>
+						<configuration>
+							<outputFileFormat>TestTask.min.css</outputFileFormat>
+							<includes>
+								<include>TestTask.less</include>
+							</includes>
+						</configuration>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<!-- here the phase you need -->
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.build.directory}/${project.build.finalName}/</directory>
+									<filtering>true</filtering>
+									<include>META-INF/resources/**</include>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

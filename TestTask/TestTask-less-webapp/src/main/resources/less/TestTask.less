@@ -1,0 +1,118 @@
+@import "https://codepen.io/OldMan/pen/QGooEg.less";
+@fs: 2vmin;
+@gold: 1.61803398875;
+@bodyPadding: 2em;
+.bodyPadding () {
+	padding-left: @bodyPadding;
+	padding-right: @bodyPadding;
+}
+
+* {
+	.scroll;
+	box-sizing: border-box;
+}
+
+html {
+	.htmlDefaults;
+	font-size: @fs;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.content () {
+	margin: 0 1em 0 1em;
+}
+
+.box {
+	&:focus {
+		border-left: 2px solid red;
+	}
+	.title{
+	    font-size: 3em;
+	    text-align: center;
+	    color: #32194d9e;
+     	margin-bottom: .3em;
+	}
+}
+
+.contentScroll (@H) {
+	max-height: @H;
+	overflow-y: scroll;
+	margin: 0;
+}
+
+.view {
+	.qform;
+}
+
+.landscape {
+	font-size: 1em * @gold;
+	.placeholder_underline (177);
+	
+  .placeholder_center;
+	width: 100%;
+}
+
+.buttons {
+	.buttonGroup;
+	&>.ok {
+	  .bottonOk();
+	  margin:.2em;
+	}
+}
+.result{
+	.ok{
+		font-size:2em;
+		text-align: center;
+	    color: #3e3e3e;
+	    margin: .7em;
+	    &>span{
+    	    margin: .1em;
+	    }
+	}
+	.fail{
+		color:red;
+	}
+}
+
+
+.qform () {
+	background: #bbb;
+	position: relative;
+	.fullWindow;
+	.top {
+		height: 38.196601125vh;
+		background: #009688;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, .3);
+	}
+
+	.abs {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		.center {
+			padding-left: 19.0983vw;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			position: relative;
+			overflow-y: auto;
+			.body {
+				padding-top: .5em;
+				overflow: hidden;
+				.box {
+					.content;
+				}
+
+				position: absolute;
+				top: 4vh;
+				margin-bottom: 4.58980338vh;
+				background: #fff;
+				width: 61.80339vw;
+				box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, .3), -1px 1px 2px 0px rgba(0, 0, 0, .3);
+				border-top: 7px solid #4db6ac;
+			}
+		}
+	}
+}
+

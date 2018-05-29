@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:v="urn:import:ru.sendto.crxmarkets.webapp.client.view"
+	xmlns="urn:import:ru.sendto.gwt.client.html">
+
+
+	<Div class="view" ui:field="view">
+		<Div class="top back" />
+		<Div class="abs form">
+			<Div class="center">
+				<Div class="body">
+					<Div class="box" ui:field="box">
+						<Div class="title" ui:field="websoket"
+							text="Rain Hills Calculator" />
+						<v:InputLandscapeView tabIndex="1" autoFocus="true" ui:field="wsInput" />
+
+						<Div class="buttons">
+							<Div class="ok" ui:field="sendByWs" tabIndex="2">
+								<Div class="push"/>
+								<Div class="text" text="calculate via websocket"/>
+							</Div>
+							<Div class="ok" ui:field="sendByRst" tabIndex="3">
+								<Div class="push"/>
+								<Div class="text" text="calculate via rest"/>
+							</Div>
+						</Div>
+						<v:VolumeView />
+						<!-- <Input type="button" ui:field="sendByWs"
+							text="calculate via websocket " />
+						<Input type="button" ui:field="sendByRst"
+							text="calculate via rest " /> -->
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Div>
+</ui:UiBinder> 

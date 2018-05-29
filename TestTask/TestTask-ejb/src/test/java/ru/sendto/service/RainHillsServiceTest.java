@@ -13,9 +13,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import lombok.extern.java.Log;
-import ru.sendto.dto.CalculateVolumeRequest;
-import ru.sendto.dto.LandscapeNotDefException;
-import ru.sendto.dto.Volume;
+import ru.sendto.crxmarkets.dto.CalculateVolumeRequest;
+import ru.sendto.crxmarkets.dto.LandscapeNotDefException;
+import ru.sendto.crxmarkets.dto.Volume;
 import ru.sendto.service.utils.ComparatorProducer;
 
 /**

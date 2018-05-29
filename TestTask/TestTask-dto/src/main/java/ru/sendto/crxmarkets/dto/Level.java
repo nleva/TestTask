@@ -1,4 +1,4 @@
-package ru.sendto.dto;
+package ru.sendto.crxmarkets.dto;
 
 import lombok.Data;
 

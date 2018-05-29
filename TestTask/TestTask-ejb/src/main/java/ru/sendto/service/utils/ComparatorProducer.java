@@ -5,7 +5,7 @@ import java.util.Comparator;
 import javax.enterprise.inject.Produces;
 import javax.inject.Named;
 
-import ru.sendto.dto.Level;
+import ru.sendto.crxmarkets.dto.Level;
 /**
  * Comparators for different different purposes
  * @author Lev Nadeinsky

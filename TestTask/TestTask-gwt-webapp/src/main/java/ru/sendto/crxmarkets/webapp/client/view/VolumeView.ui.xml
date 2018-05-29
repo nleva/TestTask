@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:v="urn:import:ru.sendto.crxmarkets.webapp.client.view"
+	xmlns="urn:import:ru.sendto.gwt.client.html">
+
+
+	<Div class="result" ui:field="view">
+		<Div class="ok">
+	    	<Span text="Volume = " />
+			<Span ui:field="value"/>
+		</Div>
+		<Div class="fail">
+			<Span ui:field="fail"/>
+		</Div>
+  	</Div>
+</ui:UiBinder> 

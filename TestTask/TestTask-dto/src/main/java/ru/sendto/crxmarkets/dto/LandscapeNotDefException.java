@@ -1,4 +1,4 @@
-package ru.sendto.dto;
+package ru.sendto.crxmarkets.dto;
 
 public class LandscapeNotDefException extends RuntimeException {
 	public LandscapeNotDefException() {

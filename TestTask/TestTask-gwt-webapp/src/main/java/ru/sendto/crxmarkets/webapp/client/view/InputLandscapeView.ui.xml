@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:v="urn:import:ru.sendto.crxmarkets.webapp.client.view"
+	xmlns="urn:import:ru.sendto.gwt.client.html">
+
+
+<Div class="landscape" title="Array of integers separated by coma">
+    <Label>
+      <Input placeholder=" " required="true" ui:field="landscape" value=""/>
+      <Div class="holder" attr="placeholder=Landscape (array of integers)" ui:field="placeholder" />
+      <Div class="uline" />
+    </Label>
+  </Div>
+</ui:UiBinder> 

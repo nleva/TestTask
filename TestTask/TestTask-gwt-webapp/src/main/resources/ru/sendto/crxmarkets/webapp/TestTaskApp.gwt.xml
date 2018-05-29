@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="VideoApp">
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="ru.sendto.gwt.Html" />
+	<inherits name="ru.sendto.gwt.client.Notifications" />
+	<inherits name="ru.sendto.rest.UniversalRest" />
+	<inherits name="ru.sendto.gwt.client.Shortcut" />
+	<inherits name="ru.sendto.gwt.client.Bus" />
+	<inherits name="ru.sendto.DtoCommon" />
+	<inherits name="ru.sendto.crxmarkets.Dto" />
+	<entry-point class="ru.sendto.crxmarkets.webapp.client.TestTaskApp" />
+	<source path="client" />
+	<set-property name="user.agent" value="safari"/>
+</module>

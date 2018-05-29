@@ -31,6 +31,11 @@
 			<type>ejb</type>
 		</dependency>
 		<dependency>
+			<groupId>ru.sendto.crxmarket</groupId>
+			<artifactId>TestTask-web-static</artifactId>
+			<type>war</type>
+		</dependency>
+		<dependency>
 			<groupId>ru.send-to.ejb</groupId>
 			<artifactId>EjbContext</artifactId>
 			<type>ejb</type>
@@ -115,6 +120,11 @@
 							<groupId>ru.send-to.rest</groupId>
 							<artifactId>UniversalRest-websocket</artifactId>
 							<contextRoot>/ws</contextRoot>
+						</webModule>
+						<webModule>
+							<groupId>ru.sendto.crxmarket</groupId>
+							<artifactId>TestTask-web-static</artifactId>
+							<contextRoot>/</contextRoot>
 						</webModule>
 					</modules>
 				</configuration>

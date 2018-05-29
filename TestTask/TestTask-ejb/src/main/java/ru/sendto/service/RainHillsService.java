@@ -18,10 +18,10 @@ import javax.inject.Named;
 
 import lombok.Setter;
 import lombok.extern.java.Log;
-import ru.sendto.dto.CalculateVolumeRequest;
-import ru.sendto.dto.LandscapeNotDefException;
-import ru.sendto.dto.Level;
-import ru.sendto.dto.Volume;
+import ru.sendto.crxmarkets.dto.CalculateVolumeRequest;
+import ru.sendto.crxmarkets.dto.LandscapeNotDefException;
+import ru.sendto.crxmarkets.dto.Level;
+import ru.sendto.crxmarkets.dto.Volume;
 import ru.sendto.ejb.interceptor.BundleResult;
 
 /**
