@@ -8,10 +8,14 @@ import javax.inject.Named;
 import ru.sendto.crxmarkets.dto.Level;
 /**
  * Comparators for different different purposes
+ * Util class
  * @author Lev Nadeinsky
  *
  */
 public class ComparatorProducer {
+	
+	private ComparatorProducer() {
+	}
 	
 	/**
 	 * Descending comparator for levels of landscape
