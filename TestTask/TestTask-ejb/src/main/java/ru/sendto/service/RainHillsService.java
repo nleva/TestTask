@@ -28,7 +28,6 @@ import ru.sendto.ejb.interceptor.BundleResult;
  * Service to calculate volume of holes (wells)
  *
  * @author Lev Nadeinsky
- * @date 2017-06-05
  */
 @Stateless
 @LocalBean

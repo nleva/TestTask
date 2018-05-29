@@ -12,19 +12,17 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import lombok.extern.java.Log;
 import ru.sendto.crxmarkets.dto.CalculateVolumeRequest;
 import ru.sendto.crxmarkets.dto.LandscapeNotDefException;
 import ru.sendto.crxmarkets.dto.Volume;
 import ru.sendto.service.utils.ComparatorProducer;
 
 /**
- * Service to calculate volume of holes (wells)
+ * Tests for RainHillsService
  *
  * @author Lev Nadeinsky
- * @date	2017-06-05
  */
-@Log
+//@Log
 public class RainHillsServiceTest extends Assert {
 	
 	
