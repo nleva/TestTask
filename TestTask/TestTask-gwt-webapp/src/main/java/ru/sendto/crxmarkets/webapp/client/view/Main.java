@@ -2,7 +2,6 @@ package ru.sendto.crxmarkets.webapp.client.view;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyDownEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -19,6 +18,12 @@ import ru.sendto.gwt.client.util.Bus;
 import ru.sendto.rest.gwt.URest;
 import ru.sendto.rest.gwt.Websocket;
 
+/**
+ * Main view of TestTask
+ * 
+ * @author Lev Nadeinsky
+ *
+ */
 public class Main extends Composite {
 
 	interface FormUiBinder extends UiBinder<Widget, Main> {}

@@ -8,8 +8,19 @@ import ru.sendto.crxmarkets.webapp.client.view.Main;
 import ru.sendto.rest.gwt.URest;
 import ru.sendto.rest.gwt.Websocket;
 
+/**
+ * TestTask entry point class
+ * @author Lev Nadeinsky
+ *
+ */
 public class TestTaskApp implements EntryPoint {
 
+	/**
+	 * entry point
+	 * init websocket
+	 * init Rest
+	 * add view to DOM
+	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public void onModuleLoad() {

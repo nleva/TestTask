@@ -17,7 +17,11 @@ import ru.sendto.gwt.client.html.Div;
 import ru.sendto.gwt.client.html.Input;
 import ru.sendto.gwt.client.util.Bus;
 import ru.sendto.rest.gwt.Websocket;
-
+/**
+ * Input widget for array of integers
+ * @author Lev Nadeinsky
+ *
+ */
 public class InputLandscapeView extends Composite {
 
 	interface FormUiBinder extends UiBinder<Widget, InputLandscapeView> {}
@@ -57,13 +61,25 @@ public class InputLandscapeView extends Composite {
 		}
 	}
 	
+	/**
+	 * get arrays of integers
+	 * @return
+	 */
 	public Integer[] getArray() {
 		return  array.toArray(new Integer[array.size()]);
 	}
 
+	/**
+	 * set tabindex 
+	 * @param tabindex 
+	 */
 	public void setTabIndex(int i) {
 		landscape.setTabIndex(i);
 	}
+	/**
+	 * set autoficus
+	 * @param isAutoFocus 
+	 */
 	public void setAutoFocus(Boolean isAutoFocus) {
 		landscape.setAttribute("autofocus", isAutoFocus+"");
 	}

@@ -13,6 +13,12 @@ import ru.sendto.gwt.client.html.Div;
 import ru.sendto.gwt.client.html.Span;
 import ru.sendto.gwt.client.util.Bus;
 
+/**
+ * Widget for request results rendering
+ * 
+ * @author Lev Nadeinsky
+ *
+ */
 public class VolumeView extends Composite {
 
 	interface FormUiBinder extends UiBinder<Widget, VolumeView> {}
