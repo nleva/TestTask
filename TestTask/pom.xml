@@ -55,12 +55,40 @@
 			
 		</dependencies>
 	</dependencyManagement>
-  <modules>
-    <module>TestTask-ear</module>
-    <module>TestTask-dto</module>
-    <module>TestTask-ejb</module>
-    <module>TestTask-web-static</module>
-    <module>TestTask-less-webapp</module>
-    <module>TestTask-gwt-webapp</module>
-  </modules>
+
+  
+  <profiles>
+  	<profile>
+  		<id>ejbAndEar</id>
+  		<activation>
+  			<activeByDefault>true</activeByDefault>
+  		</activation>
+  		
+	    <modules>
+		    <module>TestTask-ear</module>
+		    <module>TestTask-dto</module>
+		    <module>TestTask-ejb</module>
+	    </modules>
+  	</profile>
+  	<profile>
+  		<id>web</id>
+	    <modules>
+		    <module>TestTask-web-static</module>
+		    <module>TestTask-less-webapp</module>
+		    <module>TestTask-gwt-webapp</module>
+	    </modules>
+  	</profile>
+  	<profile>
+  		<id>all</id>
+	    <modules>
+		    <module>TestTask-ear</module>
+		    <module>TestTask-dto</module>
+		    <module>TestTask-ejb</module>
+		    <module>TestTask-web-static</module>
+		    <module>TestTask-less-webapp</module>
+		    <module>TestTask-gwt-webapp</module>
+	    </modules>
+  	</profile>
+  </profiles>
+  
 </project>
