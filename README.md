@@ -50,7 +50,12 @@ Unpack and start aplication server. Command line:
         For Windows: JBOSS_HOME\bin\standalone.bat
 Deploy
 ------
-To deploy application use command line 
+
+Deploy by maven plugin
+
+        mvn package wildfly:deploy
+        
+Or deploy application by command line 
 
          JBOSS_HOME/bin/jboss-cli.sh
          connect
