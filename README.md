@@ -63,6 +63,15 @@ Or deploy application by command line
          
 or web admin console
 
+
+Access the application 
+----------------------
+
+The application is running at the following URL: <http://localhost:8080/> by default.
+Rest API URL: <http://localhost:8080/rst>.
+Websoket API URL:  <ws://localhost:8080/ws>.
+
+
 IDE
 ---
 To use Eclipse, IDEA or Netbeans it`s nessasery to install lombok plugin
@@ -70,10 +79,6 @@ To use Eclipse, IDEA or Netbeans it`s nessasery to install lombok plugin
 * [IDEA](https://projectlombok.org/setup/intellij)
 * [Netbeans](https://projectlombok.org/setup/netbeans)
 
-Access the application 
-----------------------
-
-The application is running at the following URL: <http://localhost:8080/> by default.
 
 Demo
 ----
