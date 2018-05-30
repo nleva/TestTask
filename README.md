@@ -53,6 +53,9 @@ Deploy
 To deploy application use command line 
 
          JBOSS_HOME/bin/jboss-cli.sh
+         connect
+         deploy TestTask/TestTask-ear/target/TestTask-ear-0.0.1-SNAPSHOT.ear
+         
 or web admin console
 
 IDE
