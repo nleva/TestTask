@@ -110,9 +110,6 @@
 	<profiles>
 		<profile>
 			<id>ejbAndEar</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 			<build>
 				<pluginManagement>
 					<plugins>
@@ -139,10 +136,12 @@
 					</plugins>
 				</pluginManagement>
 			</build>
-
 		</profile>
 		<profile>
 			<id>all</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<dependencies>
 				<dependency>
 					<groupId>ru.sendto.crxmarket</groupId>

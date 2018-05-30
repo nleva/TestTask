@@ -83,4 +83,10 @@ public class InputLandscapeView extends Composite {
 	public void setAutoFocus(Boolean isAutoFocus) {
 		landscape.setAttribute("autofocus", isAutoFocus+"");
 	}
+	public void disable() {
+		landscape.disable();
+	}
+	public void enable() {
+		landscape.enable();
+	}
 }

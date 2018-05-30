@@ -60,9 +60,6 @@
   <profiles>
   	<profile>
   		<id>ejbAndEar</id>
-  		<activation>
-  			<activeByDefault>true</activeByDefault>
-  		</activation>
   		
 	    <modules>
 		    <module>TestTask-ear</module>
@@ -80,6 +77,9 @@
   	</profile>
   	<profile>
   		<id>all</id>
+  		<activation>
+  			<activeByDefault>true</activeByDefault>
+  		</activation>
 	    <modules>
 		    <module>TestTask-ear</module>
 		    <module>TestTask-dto</module>

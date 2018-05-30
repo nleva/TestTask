@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module>
+<module rename-to="TestTaskApp">
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="ru.sendto.gwt.Html" />
 	<inherits name="ru.sendto.gwt.client.Notifications" />

@@ -60,12 +60,18 @@ public class Main extends Composite {
 	}
 	
 	void sendWsRequest() {
+		wsInput.disable();
+		sendByWs.disable();
+		sendByRst.disable();
 		Websocket.send(new CalculateVolumeRequest()
 				.setLevels(wsInput.getArray()));
-		;
+		
 	}
 	
 	void sendRstRequest() {
+		wsInput.disable();
+		sendByWs.disable();
+		sendByRst.disable();
 		URest.send(new CalculateVolumeRequest()
 				.setLevels(wsInput.getArray()));
 	}
@@ -75,9 +81,24 @@ public class Main extends Composite {
 	void printResult(Volume v) {
 		Log.console("volume: " + v.getValue());
 	}
+	
+	{Bus.getBy(CalculateVolumeRequest.class).listen(Volume.class, this::enableInput);}
+	void enableInput(Volume v) {
+		wsInput.enable();
+		sendByWs.enable();
+		sendByRst.enable();
+	}
+	
 	{Bus.getBy(CalculateVolumeRequest.class).listen(ErrorDto.class, this::printError);}	
 	void printError(ErrorDto v) {
 		Log.console("exception:" + v.getError());
+	}
+	
+	{Bus.getBy(CalculateVolumeRequest.class).listen(ErrorDto.class, this::enableInput);}
+	void enableInput(ErrorDto v) {
+		wsInput.enable();
+		sendByWs.enable();
+		sendByRst.enable();
 	}
 	
 }
