@@ -106,7 +106,7 @@ request is just the same as websoket's one
 ``` json
 {"@": "cvr", "levels":[3,2,4,1,2]}
 ```
-but structure of response is a bit different 
+but the structure of responses is a bit different 
 ``` json
 [{"@":"vol","value":2}]
 ```
