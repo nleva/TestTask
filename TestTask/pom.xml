@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<artifactId>LibsManagement</artifactId>
 		<groupId>ru.send-to.versionManagement</groupId>
 		<version>0.8</version>
 	</parent>
-	
+
 	<groupId>ru.sendto.crxmarket</groupId>
 	<artifactId>TestTask</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -52,43 +54,58 @@
 				<version>0.0.1-SNAPSHOT</version>
 				<type>jar</type>
 			</dependency>
-			
+
 		</dependencies>
 	</dependencyManagement>
 
-  
-  <profiles>
-  	<profile>
-  		<id>ejbAndEar</id>
-  		
-	    <modules>
-		    <module>TestTask-ear</module>
-		    <module>TestTask-dto</module>
-		    <module>TestTask-ejb</module>
-	    </modules>
-  	</profile>
-  	<profile>
-  		<id>web</id>
-	    <modules>
-		    <module>TestTask-web-static</module>
-		    <module>TestTask-less-webapp</module>
-		    <module>TestTask-gwt-webapp</module>
-	    </modules>
-  	</profile>
-  	<profile>
-  		<id>all</id>
-  		<activation>
-  			<activeByDefault>true</activeByDefault>
-  		</activation>
-	    <modules>
-		    <module>TestTask-ear</module>
-		    <module>TestTask-dto</module>
-		    <module>TestTask-ejb</module>
-		    <module>TestTask-web-static</module>
-		    <module>TestTask-less-webapp</module>
-		    <module>TestTask-gwt-webapp</module>
-	    </modules>
-  	</profile>
-  </profiles>
-  
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.wildfly.plugins</groupId>
+					<artifactId>wildfly-maven-plugin</artifactId>
+					<version>1.2.1.Final</version>
+					<inherited>true</inherited>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>ejbAndEar</id>
+
+			<modules>
+				<module>TestTask-ear</module>
+				<module>TestTask-dto</module>
+				<module>TestTask-ejb</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>web</id>
+			<modules>
+				<module>TestTask-web-static</module>
+				<module>TestTask-less-webapp</module>
+				<module>TestTask-gwt-webapp</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>all</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>TestTask-ear</module>
+				<module>TestTask-dto</module>
+				<module>TestTask-ejb</module>
+				<module>TestTask-web-static</module>
+				<module>TestTask-less-webapp</module>
+				<module>TestTask-gwt-webapp</module>
+			</modules>
+		</profile>
+	</profiles>
+
 </project>
