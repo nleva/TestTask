@@ -1,6 +1,13 @@
 # TestTask
 RainHills calculator
 
+System requirements
+-------------------
+
+* Java 8 (JDK 1.8) 
+* maven 3.3.9
+* Wildfly 10+
+
 Download project
 ----------------
 
@@ -11,17 +18,17 @@ Download project
 3 variants of building application
 ----------------------------------
 
-* (default) Build ejb with websocket and rest wrapped into EAR
+* (ejbAndEar)Build ejb with websocket and rest wrapped into EAR
 ``` bash
-  mvn install 
+  mvn install -P ejbAndEar
 ```
 * (web) Build web modules wrapped into WAR
 ``` bash
   mvn install -P web 
 ```
-* (all) Build all modles ejb + web wrapped into EAR
+* (all) (default) Build all modles ejb + web wrapped into EAR
 ``` bash
-  mvn install -P all 
+  mvn install
 ```
 
 Target files
@@ -36,6 +43,29 @@ Application server
 
 To start application you need wildfly 10+ 
 [wildfly download page](http://wildfly.org/downloads/)
+
+Unpack and start aplication server. Command line:
+
+        For Linux:   JBOSS_HOME/bin/standalone.sh
+        For Windows: JBOSS_HOME\bin\standalone.bat
+Deploy
+------
+To deploy application use command line 
+
+         JBOSS_HOME/bin/jboss-cli.sh
+or web admin console
+
+IDE
+---
+To use Eclipse, IDEA or Netbeans it`s nessasery to install lombok plugin
+* [Eclipse](https://projectlombok.org/setup/eclipse)
+* [IDEA](https://projectlombok.org/setup/intellij)
+* [Netbeans](https://projectlombok.org/setup/netbeans)
+
+Access the application 
+----------------------
+
+The application is running at the following URL: <http://localhost:8080/> by default.
 
 Demo
 ----
