@@ -68,7 +68,9 @@ Access the application
 ----------------------
 
 The application is running at the following URL: <http://localhost:8080/> by default.
+
 Rest API URL: <http://localhost:8080/rst>.
+
 Websoket API URL:  <ws://localhost:8080/ws>.
 
 
