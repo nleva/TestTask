@@ -4,12 +4,12 @@
     <parent>
     <artifactId>TestTask</artifactId>
     <groupId>ru.sendto.crxmarket</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
 
     <groupId>ru.sendto.crxmarket</groupId>
     <artifactId>TestTask-ejb</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>ejb</packaging>
 
     <name>TestTask-ejb</name>
