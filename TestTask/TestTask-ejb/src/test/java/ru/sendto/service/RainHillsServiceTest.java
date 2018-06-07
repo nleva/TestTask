@@ -39,6 +39,7 @@ public class RainHillsServiceTest extends Assert {
 			{new Integer[]{4,1,1,0,2,3},	8L},
 			{new Integer[]{4,1,1,7,2,3},	7L},
 			{new Integer[]{7,1,1,4,2,3},	7L},
+			{new Integer[]{7,1,8,7,9,4,2,3},8L},
 			{new Integer[]{-5,7},			0L},
 			{new Integer[]{1},				0L},
 			{new Integer[]{},				0L},
@@ -53,13 +54,35 @@ public class RainHillsServiceTest extends Assert {
 				new CalculateVolumeRequest()
 					.setLevels(landscape));
 		assertThat(vol.getValue(), is( equalTo( expected )));
-		
+
 		//reverse test
 		vol = service.calculateVolume(
 				new CalculateVolumeRequest()
 					.setLevels(
 							reverse(landscape)));
 		assertThat(vol.getValue(), is( equalTo( expected )));
+
+		//moved test
+		vol = service.calculateVolume(
+				new CalculateVolumeRequest()
+					.setLevels(
+							moveY(landscape,landscape.length)));
+		assertThat(vol.getValue(), is( equalTo( expected )));
+
+		//Duplicated test
+		vol = service.calculateVolume(
+				new CalculateVolumeRequest()
+					.setLevels(
+							duplicated(landscape)));
+		assertThat(vol.getValue(), is( equalTo( expected*2 )));
+		
+
+		//scaled test
+		vol = service.calculateVolume(
+				new CalculateVolumeRequest()
+					.setLevels(
+							scale(landscape,2)));
+		assertThat(vol.getValue(), is( equalTo( expected*2 )));
 	}
 	
 	private Integer[] reverse(Integer[] array) {
@@ -69,8 +92,30 @@ public class RainHillsServiceTest extends Assert {
 		    array[array.length - i - 1] = temp;
 		}
 		return array;
-		
 	}
+
+
+	private Integer[] scale(Integer[] array, int factor) {
+		for(int i = 0; i < array.length; i++){
+			array[i]=array[i]*factor;
+		}
+		return array;
+	}
+
+	private Integer[] moveY(Integer[] array, int deltaY) {
+		for(int i = 0; i < array.length; i++){
+			array[i]+=deltaY;
+		}
+		return array;
+	}
+	private Integer[] duplicated(Integer[] array) {
+		Integer[] dub = new Integer[array.length*2];
+		for(int i = 0; i < dub.length; i++){
+			dub[i]=array[i/2];
+		}
+		return dub;
+	}
+	
 	
 	@Test(groups="unit", expectedExceptions = LandscapeNotDefException.class)
 	public void landscapeNotDefTest() {
