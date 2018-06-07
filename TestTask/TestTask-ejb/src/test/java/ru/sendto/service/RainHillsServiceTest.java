@@ -15,7 +15,6 @@ import org.testng.annotations.Test;
 import ru.sendto.crxmarkets.dto.CalculateVolumeRequest;
 import ru.sendto.crxmarkets.dto.LandscapeNotDefException;
 import ru.sendto.crxmarkets.dto.Volume;
-import ru.sendto.service.utils.ComparatorProducer;
 
 /**
  * Tests for RainHillsService
@@ -26,9 +25,7 @@ import ru.sendto.service.utils.ComparatorProducer;
 public class RainHillsServiceTest extends Assert {
 	
 	
-	RainHillsService service = new RainHillsService()
-			.setDescLevelsComparator(ComparatorProducer.descLevelsComparator)
-			.setAscIndexComparator(ComparatorProducer.ascIndexComparator);
+	RainHillsService service = new RainHillsService();
 	
 	@DataProvider
 	public Object[][] landscape() {

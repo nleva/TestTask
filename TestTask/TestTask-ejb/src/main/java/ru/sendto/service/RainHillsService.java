@@ -17,7 +17,6 @@ import lombok.Setter;
 import lombok.extern.java.Log;
 import ru.sendto.crxmarkets.dto.CalculateVolumeRequest;
 import ru.sendto.crxmarkets.dto.LandscapeNotDefException;
-import ru.sendto.crxmarkets.dto.Level;
 import ru.sendto.crxmarkets.dto.Volume;
 import ru.sendto.ejb.interceptor.BundleResult;
 
@@ -30,16 +29,6 @@ import ru.sendto.ejb.interceptor.BundleResult;
 @LocalBean
 @Log
 public class RainHillsService {
-
-	@Inject
-	@Named
-	@Setter
-	Comparator<Level> descLevelsComparator;
-	
-	@Inject
-	@Named
-	@Setter
-	Comparator<Level> ascIndexComparator;
 
 	/**
 	 * Calculate volume of all "holes" in integer array

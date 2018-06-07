@@ -4,12 +4,12 @@
 	<parent>
     <artifactId>TestTask</artifactId>
     <groupId>ru.sendto.crxmarket</groupId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
   </parent>
 
 	<groupId>ru.sendto.crxmarket</groupId>
 	<artifactId>TestTask-dto</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>TestTask-dto</name>
