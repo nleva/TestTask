@@ -50,13 +50,29 @@ Unpack and start aplication server. Command line:
         For Windows: JBOSS_HOME\bin\standalone.bat
 Deploy
 ------
-To deploy application use command line 
+
+Deploy by maven plugin
+
+        mvn package wildfly:deploy
+        
+Or deploy application by command line 
 
          JBOSS_HOME/bin/jboss-cli.sh
          connect
          deploy TestTask/TestTask-ear/target/TestTask-ear-0.0.1-SNAPSHOT.ear
          
 or web admin console
+
+
+Access the application 
+----------------------
+
+The application is running at the following URL: <http://localhost:8080/> by default.
+
+Rest API URL: <http://localhost:8080/rst>.
+
+Websoket API URL:  <ws://localhost:8080/ws>.
+
 
 IDE
 ---
@@ -65,10 +81,6 @@ To use Eclipse, IDEA or Netbeans it`s nessasery to install lombok plugin
 * [IDEA](https://projectlombok.org/setup/intellij)
 * [Netbeans](https://projectlombok.org/setup/netbeans)
 
-Access the application 
-----------------------
-
-The application is running at the following URL: <http://localhost:8080/> by default.
 
 Demo
 ----
@@ -94,7 +106,7 @@ request is just the same as websoket's one
 ``` json
 {"@": "cvr", "levels":[3,2,4,1,2]}
 ```
-but structure of response is a bit different 
+but the structure of responses is a bit different 
 ``` json
 [{"@":"vol","value":2}]
 ```
