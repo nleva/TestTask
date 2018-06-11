@@ -81,12 +81,6 @@ To use Eclipse, IDEA or Netbeans it`s nessasery to install lombok plugin
 * [IDEA](https://projectlombok.org/setup/intellij)
 * [Netbeans](https://projectlombok.org/setup/netbeans)
 
-
-Demo
-----
-
-Online demo is avaliable at https://send-to.ru/
-
 APIs
 ---
 
